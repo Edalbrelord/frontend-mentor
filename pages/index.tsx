@@ -2,7 +2,7 @@ import ProjectPreview from "../components/projectPreview/projectPreview";
 import Link from "next/dist/client/link";
 
 export default function Index() {
-    return <div className="text-gray-300 h-screen bg-gray-800">
+    return <div className="text-gray-300 h-full bg-gray-800">
         <div className="container mx-auto flex flex-col items-center p-10 space-y-24">
             <div className="flex flex-col items-center">
                 <div className="">
@@ -15,13 +15,13 @@ export default function Index() {
             <div className="">
                 <p>TODO: Buttons to select types?</p>
             </div>
-            <div className="w-full flex flex-row">
-                <Link href="/faq-accordion">
-                    {/*TODO: Retrieve from markdown files?*/}
-                    <a>
-                        <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc=""/>
-                    </a>
-                </Link>
+            <div className="w-full flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10">
+                {/*TODO: Retrieve from markdown files?*/}
+
+                <div className="w-full md:w-1/3">
+                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
+                </div>
+
             </div>
         </div>
     </div>;
