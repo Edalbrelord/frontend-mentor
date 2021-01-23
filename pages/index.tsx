@@ -51,28 +51,24 @@ export default function Index() {
         </div>
 
         <div className="container mx-auto flex flex-col items-center p-10 md:px-0 space-y-24">
-            <div className="w-full flex flex-col flex-wrap md:flex-row">
+            <div className="w-full flex flex-col flex-wrap md:px-20 space-y-10">
                 {/*TODO: Retrieve from markdown files?*/}
 
-                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
-                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
+                <div className="">
+                    <ProjectPreview
+                        title="FAQ Accordion"
+                        description="An accordion to present Frequently Asked Questions, mobile first and responsive design"
+                        imageSrc="/images/projects/faq_accordion.jpg"
+                        link="faq-accordion"
+                        imageRight={true}/>
                 </div>
 
-                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
-                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
-                </div>
-
-                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
-                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
-                </div>
-
-                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
-                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
-                </div>
-
-                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
-                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
-                </div>
+                <ProjectPreview
+                    title="FAQ Accordion"
+                    description="An accordion to present Frequently Asked Questions, mobile first and responsive design"
+                    imageSrc="/images/projects/faq_accordion.jpg"
+                    link="faq-accordion"
+                    imageRight={false}/>
 
             </div>
         </div>
