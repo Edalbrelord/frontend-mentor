@@ -12,7 +12,7 @@ export type ProjectPreviewProps = {
 export default function ProjectPreview(props: ProjectPreviewProps){
     return <Link href={props.link}>
         <a className={styles.greyscale}>
-            <div className="flex flex-row justify-evenly rounded-xl border border-gray-400 shadow-lg bg-gray-200 bg-opacity-30 text-white hover:text-blue-200 overflow-hidden">
+            <div className="flex flex-row justify-evenly rounded-xl border border-gray-400 shadow-lg bg-white bg-opacity-100 text-black hover:text-blue-700 overflow-hidden">
                 <div className={`flex-none w-1/2 ${props.imageRight ? "order-last": ""}`}>
                     <div className="m-h-28">
                         <img src={props.imageSrc} alt={props.title} className=""/>
@@ -20,8 +20,8 @@ export default function ProjectPreview(props: ProjectPreviewProps){
 
                 </div>
                 <div className="flex-none w-1/2 p-5">
-                    <h3 className="text-xl font-semibold">{props.title}</h3>
-                    <p>{props.description}</p>
+                    <h3 className="text-xl font-bold">{props.title}</h3>
+                    <p className="text-black">{props.description}</p>
                 </div>
             </div>
         </a>

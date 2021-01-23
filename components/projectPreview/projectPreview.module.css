@@ -1,5 +1,5 @@
 .greyscale img{
-    filter: grayscale(80%);
+    filter: grayscale(50%);
 }
 .greyscale:hover img{
     filter: none;

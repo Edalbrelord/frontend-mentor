@@ -26,25 +26,22 @@ export default function FaqAccordion() {
         return <FaqComponent title={faq.title} description={faq.description}/>
     });
 
-    return <div className={`h-screen ${styles.wrapper}`}>
-        <div className={`container mx-auto flex items-center font-faq-accordion py-36 px-10`}>
-            <div
-                className={"flex-auto flex flex-col md:flex-row items-center bg-white rounded-xl m-5 p-3 md:m-10 " + styles.shadow}>
+    return <div className={`flex justify-center items-center h-screen ${styles.wrapper}`}>
+        <div className={`container mx-auto flex items-center font-faq-accordion`}>
+            <div className={"flex-auto flex flex-col md:flex-row items-center bg-white rounded-xl m-5 px-3 py-20 md:m-10 " + styles.shadow}>
                 <img className={"md:hidden flex-none pb-4 " + styles.translated}
                      src="/images/faq-accordion/illustration-woman-online-mobile.svg" alt="Woman Online"/>
 
-                <div className="flex-none relative hidden md:block  z-10 w-1/2">
+                <div className="flex-none relative hidden md:block z-10 w-1/2">
                     <img className={"z-20 relative " + styles["translated-md"]}
                          src="/images/faq-accordion/illustration-woman-online-desktop.svg" alt="Woman Online"/>
                     <img className={"z-40 absolute " + styles["translated-box"]}
                          src="/images/faq-accordion/illustration-box-desktop.svg" alt="Woman Online"/>
-
                 </div>
 
 
                 <div className="flex-auto mb-2 w-full p-2">
                     <h1 className="flex-none pl-3 text-3xl py-8 font-black tracking-wide">FAQ</h1>
-
                     {faqComponents}
                 </div>
             </div>

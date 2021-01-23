@@ -1,10 +1,32 @@
 import ProjectPreview from "../components/projectPreview/projectPreview";
 import styles from "./index.module.css";
 import {useEffect} from "react";
+import {GetStaticProps} from "next";
+import {ProjectsService} from "../services/projectsService";
 
-export default function Index() {
+export const getStaticProps: GetStaticProps = async (context) => {
+    const projectFiles = ProjectsService.getProjectFiles();
+
+    return {
+        props: {
+            projectFiles
+        },
+    }
+}
+
+export default function Index(props) {
     useEffect(() => {
-        document.querySelector("body").classList.add("bg-gray-800");
+        // document.querySelector("body").classList.add("bg-gray-200");
+        // document.querySelector("body").classList.add("bg-blue-900");
+    });
+
+    const projectPreviews = props.projectFiles.map((projectFile, index) => {
+        return <ProjectPreview
+            title={projectFile.title}
+            description={projectFile.description}
+            imageSrc={projectFile.imageSrc}
+            link={projectFile.link}
+            imageRight={index % 2 == 0}/>
     });
 
     return <div className="text-gray-300">
@@ -22,8 +44,8 @@ export default function Index() {
             </div>
         </div>
 
-        <div className="bg-white text-black py-10">
-            <div className="container flex flex-row mx-auto justify-evenly">
+        <div className="bg-white text-black">
+            <div className="container py-20 flex flex-row mx-auto justify-evenly border-b">
                 <div className="border border-gray-400 p-3 rounded-md flex flex-col items-center space-y-3 w-32 justify-between text-center">
                     <i className="fas fa-server fa-2x"/>
                     <h4 className="font-bold">Backend</h4>
@@ -50,26 +72,9 @@ export default function Index() {
             </div>
         </div>
 
-        <div className="container mx-auto flex flex-col items-center p-10 md:px-0 space-y-24">
+        <div className="container mx-auto flex flex-col items-center p-20 md:px-0 space-y-24">
             <div className="w-full flex flex-col flex-wrap md:px-20 space-y-10">
-                {/*TODO: Retrieve from markdown files?*/}
-
-                <div className="">
-                    <ProjectPreview
-                        title="FAQ Accordion"
-                        description="An accordion to present Frequently Asked Questions, mobile first and responsive design"
-                        imageSrc="/images/projects/faq_accordion.jpg"
-                        link="faq-accordion"
-                        imageRight={true}/>
-                </div>
-
-                <ProjectPreview
-                    title="FAQ Accordion"
-                    description="An accordion to present Frequently Asked Questions, mobile first and responsive design"
-                    imageSrc="/images/projects/faq_accordion.jpg"
-                    link="faq-accordion"
-                    imageRight={false}/>
-
+                {projectPreviews}
             </div>
         </div>
     </div>;
