@@ -1,24 +1,76 @@
 import ProjectPreview from "../components/projectPreview/projectPreview";
-import Link from "next/dist/client/link";
+import styles from "./index.module.css";
+import {useEffect} from "react";
 
 export default function Index() {
-    return <div className="text-gray-300 h-full bg-gray-800">
-        <div className="container mx-auto flex flex-col items-center p-10 space-y-24">
-            <div className="flex flex-col items-center">
-                <div className="">
-                    <h1 className="text-white text-3xl">Hey, I'm Stefan!</h1>
+    useEffect(() => {
+        document.querySelector("body").classList.add("bg-gray-800");
+    });
+
+    return <div className="text-gray-300">
+        <div className={styles["hero-wrapper"]}>
+            <div className="h-full align-middle flex flex-col items-center justify-center">
+                <div className={`flex flex-col items-center justify-center p-5 rounded-xl border border-gray-400 shadow-lg bg-gray-600 bg-opacity-30 ${styles.blur}`}>
+                    <div className="pb-3">
+                        <h1 className="text-white text-3xl">Hey, I'm Stefan!</h1>
+                    </div>
+                    <div className="">
+                        <h2 className="text-gray-300 text-xl">I make your designs come to life</h2>
+                    </div>
                 </div>
-                <div className="">
-                    <h2 className="text-gray-400 text-xl">I make your designs come to life</h2>
+
+            </div>
+        </div>
+
+        <div className="bg-white text-black py-10">
+            <div className="container flex flex-row mx-auto justify-evenly">
+                <div className="border border-gray-400 p-3 rounded-md flex flex-col items-center space-y-3 w-32 justify-between text-center">
+                    <i className="fas fa-server fa-2x"/>
+                    <h4 className="font-bold">Backend</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>Typescript</li>
+                    </ul>
+                </div>
+                <div className="border border-gray-400 p-3 rounded-md flex flex-col items-center space-y-3 w-32 justify-between text-center">
+                    <i className="fas fa-laptop-code fa-2x"/>
+                    <h4 className="font-bold">Frontend</h4>
+                    <ul>
+                        <li>Dart</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div className="border border-gray-400 p-3 rounded-md flex flex-col items-center space-y-3 w-32 justify-between text-center">
+                    <i className="fas fa-plane fa-2x"/>
+                    <h4 className="font-bold">Pilot</h4>
+                    <ul>
+                        <li>Boeing 737</li>
+                    </ul>
                 </div>
             </div>
-            <div className="">
-                <p>TODO: Buttons to select types?</p>
-            </div>
-            <div className="w-full flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10">
+        </div>
+
+        <div className="container mx-auto flex flex-col items-center p-10 md:px-0 space-y-24">
+            <div className="w-full flex flex-col flex-wrap md:flex-row">
                 {/*TODO: Retrieve from markdown files?*/}
 
-                <div className="w-full md:w-1/3">
+                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
+                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
+                </div>
+
+                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
+                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
+                </div>
+
+                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
+                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
+                </div>
+
+                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
+                    <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
+                </div>
+
+                <div className={"w-full md:w-1/2 lg:w-1/3 pb-5 md:p-5 lg:p-4 " + styles["flex-custom"] }>
                     <ProjectPreview title="FAQ Accordion" description="An accordion to present Frequently Asked Questions, mobile first and responsive design" imageSrc="" link="faq-accordion"/>
                 </div>
 

@@ -1,0 +1,12 @@
+.hero-wrapper {
+    background-image: url("/images/vidar-nordli-mathisen-641pLhGEEyg-unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+}
