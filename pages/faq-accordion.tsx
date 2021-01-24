@@ -27,8 +27,8 @@ export default function FaqAccordion() {
     });
 
     return <div className={`flex justify-center items-center h-screen ${styles.wrapper}`}>
-        <div className={`container mx-auto flex items-center font-faq-accordion`}>
-            <div className={"flex-auto flex flex-col md:flex-row items-center bg-white rounded-xl m-5 px-3 py-20 md:m-10 " + styles.shadow}>
+        <div className={`container mx-auto h-full py-32 flex items-center font-faq-accordion`}>
+            <div className={"flex-auto flex flex-col md:flex-row items-center bg-white rounded-xl m-5 mt-20 px-3 py-20 md:m-10 h-full " + styles.shadow}>
                 <img className={"md:hidden flex-none pb-4 " + styles.translated}
                      src="/images/faq-accordion/illustration-woman-online-mobile.svg" alt="Woman Online"/>
 
