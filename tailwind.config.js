@@ -18,11 +18,22 @@ module.exports = {
             orange: 'hsl(34, 97%, 64%)',
             blue: 'hsl(212, 86%, 64%)',
           }
+        },
+        "huddle-curved": {
+          "blue": 'hsl(207, 100%, 98%)',
+          "cyan": 'hsl(192, 100%, 9%)',
+          primary: {
+            "pink": 'hsl(322, 100%, 66%)',
+            "light-pink": 'hsl(321, 100%, 78%)',
+            "light-red": 'hsl(0, 100%, 63%)',
+          }
         }
       },
       fontFamily: {
         'faq-accordion': ['Kumbh\ Sans', 'Arial', 'sans-serif'],
         'four-card': ['Poppins', 'Arial', 'sans-serif'],
+        'huddle-curved-header': ['Poppins', 'Arial', 'sans-serif'],
+        'huddle-curved-body': ['Open\ Sans', 'Arial', 'sans-serif'],
       },
       transitionProperty: {
         'height': 'height',
