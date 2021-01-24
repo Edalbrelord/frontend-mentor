@@ -1,6 +1,11 @@
-.greyscale img{
-    filter: grayscale(50%);
-}
-.greyscale:hover img{
-    filter: none;
+@media (min-width: 768px) {
+    .greyscale img {
+
+
+        filter: grayscale(75%);
+    }
+
+    .greyscale:hover img {
+        filter: none;
+    }
 }

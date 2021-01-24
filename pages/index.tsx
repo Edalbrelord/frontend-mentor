@@ -1,6 +1,5 @@
 import ProjectPreview from "../components/projectPreview/projectPreview";
 import styles from "./index.module.css";
-import {useEffect} from "react";
 import {GetStaticProps} from "next";
 import {ProjectsService} from "../services/projectsService";
 
@@ -15,11 +14,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 export default function Index(props) {
-    useEffect(() => {
-        // document.querySelector("body").classList.add("bg-gray-200");
-        // document.querySelector("body").classList.add("bg-blue-900");
-    });
-
     const projectPreviews = props.projectFiles.map((projectFile, index) => {
         return <ProjectPreview
             title={projectFile.title}
@@ -50,7 +44,7 @@ export default function Index(props) {
         </div>
 
         <div className="bg-white text-black container mx-auto flex flex-col justify-center text-center">
-            <h2 className="pt-20 pb-20 font-bold text-2xl">Skills</h2>
+            <h2 className="pt-20 pb-20 font-bold text-2xl text-blue-900">Skills</h2>
             <div className="pb-20 flex flex-row justify-evenly border-b">
                 <div className="border border-gray-400 p-3 rounded-md flex flex-col items-center space-y-3 w-32 justify-between text-center">
                     <i className="fas fa-server fa-2x"/>
@@ -79,8 +73,8 @@ export default function Index(props) {
         </div>
 
         <div className="container mx-auto flex flex-col items-center px-20 pb-20 md:px-0 space-y-20">
-            <h2 className="pt-20 font-bold text-2xl text-black">Projects</h2>
-            <div className="w-full flex flex-col flex-wrap md:px-20 space-y-20">
+            <h2 className="pt-20 font-bold text-2xl text-blue-900">Projects</h2>
+            <div className="w-full flex flex-col flex-wrap md:px-20 space-y-10 md:space-y-20">
                 {projectPreviews}
             </div>
         </div>
